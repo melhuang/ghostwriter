@@ -23,6 +23,9 @@
         {{ partial "exponea.html" . }}
         {{ partial "fathom.html" . }}
         {{ partial "plausible.html" . }}
+        {{ if .Site.Params.GoogleAnalyticsID }}
+          {{ partial "analytics-gtag.html" . }}
+        {{ end }}
     </head>
     <body>
         {{ template "_internal/google_analytics.html" . }}
